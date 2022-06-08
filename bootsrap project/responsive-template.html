@@ -1,101 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-     <!-- bootstrap css file  -->
-     
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- bootstrap css file  -->
 
-     <style>
-         #header{
-             background-color: #f0932b;
-             color: white;
-         }
-         #menu{
-             padding: 0;
-             margin: 0;
-             list-style: none;
-             
-         }
-         #menu li{
-             display: inline-block;
-         }
-         #menu li a{
-            
-             color: white;
-             padding: 5px 10px;
-             display: block;
-         }
-         #menu li a:hover{
-             background-color: aliceblue;
-             color: black;
-             border-radius: 5px;
-         }
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
-         #banner{
-             background-image: url(../images/bg-image.jpg);
-             background-size:cover;
-             background-repeat: no-repeat;
-             height: 400px;
-         }  
-         #banner .banner-text h1.title{
-             background-color: aliceblue;
-             color: black;
-             display: inline-block;
-         }
+    <style>
+       
+      #header {
+        background-color: #f0932b;
+        color: white;
+        overflow-x: hidden;
+      }
+      #menu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      #menu li {
+        display: inline-block;
+      }
+      #menu li a {
+        color: white;
+        padding: 5px 10px;
+        display: block;
+      }
+      #menu li a:hover {
+        background-color: aliceblue;
+        color: black;
+        border-radius: 5px;
+      }
 
-         #banner .banner-text p.lead{
-             background-color: rgba(226, 191, 154,0.7);
-             display: inline-block;
-         }
+      #banner {
+        background-image: url(../images/bg-image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 400px;
+      }
+      #banner .banner-text h1.title {
+        background-color: aliceblue;
+        color: black;
+        display: inline-block;
+      }
 
-         .banner-text{
+      #banner .banner-text p.lead {
+        background-color: rgba(226, 191, 154, 0.7);
+        display: inline-block;
+      }
+      @media screen and (max-width: 570px) {
+        h1.title {
+          font-size: 25px;
+        }
+      }
+
+      .service-box {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      h2.section-head::after {
+        background-color: #f0932b;
+        content: "";
+        margin: 20px auto;
+        display: block;
+        width: 100px;
+        height: 5px;
+      }
+
+      #testinomial {
+        background: url(../images/nicolas-thomas-PLDkBHbM3Hc-unsplash.jpg)
+          no-repeat;
+        background-size: 100% 100%;
+        padding: 50px 0;
+        position: relative;
+      }
+      #testinomial::before {
+        background-color: rgba(52, 73, 94, 0.7);
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* .banner-text{
              padding: 5rem;
-         }
-     </style>
-</head>
-<body>
+         } */
+    </style>
+  </head>
+  <body>
     <div id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    our logo
-                </div>
-                <div class="col-8">
-                    <ul id="menu">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Career</a></li>
-                        <li><a href="">Work</a></li>
-                        <li><a href="">Main</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <center><h4>Our logo</h4></center>
+          </div>
+          <div class="col-md-8">
+            <center>
+              <ul id="menu" class="float-md-right">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Career</a></li>
+                <li><a href="">Work</a></li>
+                <li><a href="">Main</a></li>
+              </ul>
+            </center>
+          </div>
         </div>
+      </div>
     </div>
 
     <div id="banner" class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-lg-6">
-                    <div class="banner-text">
-                        <h1 class="title">Our Tag line come here</h1>
-                        <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto distinctio fugit a delectus magni perspiciatis, totam ratione nam deserunt tempora.</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-lg-6">
+            <div class="banner-text py-5">
+              <h1 class="title">Our Tag line come here</h1>
+              <p class="lead">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Architecto distinctio fugit a delectus magni perspiciatis, totam
+                ratione nam deserunt tempora.
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
 
+    <div class="container section" style="margin: 40px 25px">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="section-head">
+            <center>
+              <h3 style="margin: 25px 0px">Our heading come here!</h3>
+            </center>
+          </h2>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box" style="border: 1px solid red">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAtRJREFUWEftmI+RDkEQxd9FgAi4CBABGSCCcxEgAkSACBDBEQEicBfBEQEioH5qWr3tr2dm95TyldJVX13tzkzPm/f6z+wdaM/sYM/w6J8BdFfSLUk3JF1ufyH7VNLX9ve9pLdbFdjCEBs/kPSwgVizF+CeS3rRgE7XrAV0X9KzDUDyxgA7lvRmhmgNIE4IM26fJSEJv9uSjtrg6yYX7/hdSuvw9WgEagbolW2Gn2+SnjQZwi/Pj9vD0zbuY0jswPAJW6WNAGVmoP2wiIURIDa91lhzUMQUQHesB4iYeVnMr043A5RZDrf3qpiqAJFN5xbAyNSjnLkEOwfA2JwYgc14jvgKycNXyXgFyE8MGChHPnfMxlgAyWRW4wQ8Mn2yA+aYKys1yOMUvqBH/ShpYgwwAd4PzF5X3EFmiAp80ibADpK4VaDOWvozj1S/ntY4mBiCpavtYRFLGZBnVuXIAQGYU+dix6GYFyzP/CwyLgOi0NGjMGpFxALPsPXFTl9mSRt3pnmFLBHoEXuRxR8asz+XZkBOJWB4DiO4Iw6QicY6MhptyDfyxbyb4SgD+r4mQluzLAubra9aTs/9Lxx7D8glIxizZFGLFjR3ju2SjXwt5P9bQY3cVHhsGNRb0r53xyHDyKCoYVXaUyruNEDDtPd0RS66u1tVGJGGcoFRGHP25Yace+WwMOLUWweNEtaw32kdDir3ykU3mDXX6Mi5uSID5g3XmazGAUVv/GhyrmquIPaODCg/hccE7x1sdPTe9cN9xU3CK3j3u6x3QasC9I9f0IL66gpLiffaxNwZoBzErNmRqtc6co3LgVx9Z80u+Xyx9CTfqamzrw4WVD0JYPEZRJpH00XSdy39KQE0ZLcuM2sZinn5jrNzssmL3t3pQgzFImin5OfvrBEWgMAwv0U29RatkaxaC2NRlQEa9x4apf+zYfrpnJ1fFNBWyVbP/w9oRtUPb9DHJQ/VpVsAAAAASUVORK5CYII="
+            />
+            <h3>some heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima,
+              alias.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box" style="border: 3px solid greenyellow">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAtRJREFUWEftmI+RDkEQxd9FgAi4CBABGSCCcxEgAkSACBDBEQEicBfBEQEioH5qWr3tr2dm95TyldJVX13tzkzPm/f6z+wdaM/sYM/w6J8BdFfSLUk3JF1ufyH7VNLX9ve9pLdbFdjCEBs/kPSwgVizF+CeS3rRgE7XrAV0X9KzDUDyxgA7lvRmhmgNIE4IM26fJSEJv9uSjtrg6yYX7/hdSuvw9WgEagbolW2Gn2+SnjQZwi/Pj9vD0zbuY0jswPAJW6WNAGVmoP2wiIURIDa91lhzUMQUQHesB4iYeVnMr043A5RZDrf3qpiqAJFN5xbAyNSjnLkEOwfA2JwYgc14jvgKycNXyXgFyE8MGChHPnfMxlgAyWRW4wQ8Mn2yA+aYKys1yOMUvqBH/ShpYgwwAd4PzF5X3EFmiAp80ibADpK4VaDOWvozj1S/ntY4mBiCpavtYRFLGZBnVuXIAQGYU+dix6GYFyzP/CwyLgOi0NGjMGpFxALPsPXFTl9mSRt3pnmFLBHoEXuRxR8asz+XZkBOJWB4DiO4Iw6QicY6MhptyDfyxbyb4SgD+r4mQluzLAubra9aTs/9Lxx7D8glIxizZFGLFjR3ju2SjXwt5P9bQY3cVHhsGNRb0r53xyHDyKCoYVXaUyruNEDDtPd0RS66u1tVGJGGcoFRGHP25Yace+WwMOLUWweNEtaw32kdDir3ykU3mDXX6Mi5uSID5g3XmazGAUVv/GhyrmquIPaODCg/hccE7x1sdPTe9cN9xU3CK3j3u6x3QasC9I9f0IL66gpLiffaxNwZoBzErNmRqtc6co3LgVx9Z80u+Xyx9CTfqamzrw4WVD0JYPEZRJpH00XSdy39KQE0ZLcuM2sZinn5jrNzssmL3t3pQgzFImin5OfvrBEWgMAwv0U29RatkaxaC2NRlQEa9x4apf+zYfrpnJ1fFNBWyVbP/w9oRtUPb9DHJQ/VpVsAAAAASUVORK5CYII="
+            />
+            <h3>some heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima,
+              alias.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box" style="border: 1px solid black">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAtRJREFUWEftmI+RDkEQxd9FgAi4CBABGSCCcxEgAkSACBDBEQEicBfBEQEioH5qWr3tr2dm95TyldJVX13tzkzPm/f6z+wdaM/sYM/w6J8BdFfSLUk3JF1ufyH7VNLX9ve9pLdbFdjCEBs/kPSwgVizF+CeS3rRgE7XrAV0X9KzDUDyxgA7lvRmhmgNIE4IM26fJSEJv9uSjtrg6yYX7/hdSuvw9WgEagbolW2Gn2+SnjQZwi/Pj9vD0zbuY0jswPAJW6WNAGVmoP2wiIURIDa91lhzUMQUQHesB4iYeVnMr043A5RZDrf3qpiqAJFN5xbAyNSjnLkEOwfA2JwYgc14jvgKycNXyXgFyE8MGChHPnfMxlgAyWRW4wQ8Mn2yA+aYKys1yOMUvqBH/ShpYgwwAd4PzF5X3EFmiAp80ibADpK4VaDOWvozj1S/ntY4mBiCpavtYRFLGZBnVuXIAQGYU+dix6GYFyzP/CwyLgOi0NGjMGpFxALPsPXFTl9mSRt3pnmFLBHoEXuRxR8asz+XZkBOJWB4DiO4Iw6QicY6MhptyDfyxbyb4SgD+r4mQluzLAubra9aTs/9Lxx7D8glIxizZFGLFjR3ju2SjXwt5P9bQY3cVHhsGNRb0r53xyHDyKCoYVXaUyruNEDDtPd0RS66u1tVGJGGcoFRGHP25Yace+WwMOLUWweNEtaw32kdDir3ykU3mDXX6Mi5uSID5g3XmazGAUVv/GhyrmquIPaODCg/hccE7x1sdPTe9cN9xU3CK3j3u6x3QasC9I9f0IL66gpLiffaxNwZoBzErNmRqtc6co3LgVx9Z80u+Xyx9CTfqamzrw4WVD0JYPEZRJpH00XSdy39KQE0ZLcuM2sZinn5jrNzssmL3t3pQgzFImin5OfvrBEWgMAwv0U29RatkaxaC2NRlQEa9x4apf+zYfrpnJ1fFNBWyVbP/w9oRtUPb9DHJQ/VpVsAAAAASUVORK5CYII="
+            />
+            <h3>some heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima,
+              alias.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div id="testinomial" class="section text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="section-head">
+              <center>
+                <h3 style="margin: 25px 0px" class="text-white">
+                  Our heading come here!
+                </h3>
+              </center>
+            </h2>
+          </div>
+          <div class="col-md-6">
+            <div class="testimonial">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam,
+                similique. Lorem ipsum dolor sit amet.
+              </p>
+              <center>
+                <img
+                  src="../images/sebastian-herrmann-Sr1xHcs6ic8-unsplash.jpg"
+                  alt=""
+                  style="width: 80%; height: 150px"
+                />
+              </center>
+              <div class="author">Bill Gates</div>
+              <div class="author-company">Microsoft</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="testimonial">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam,
+                similique. Lorem ipsum dolor sit amet.
+              </p>
+              <img
+                src="../images/sebastian-herrmann-Sr1xHcs6ic8-unsplash.jpg"
+                alt=""
+                style="width: 80%; height: 150px"
+              />
+              <div class="author">Bill Gates</div>
+              <div class="author-company">Microsoft</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<!-- bootstrap js file -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
-</body>
+    <div id="news" style="margin: 40px 0;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12" style="margin-bottom: 20px;">
+           <center> <h2 class="section-head" >Recent News</h2></center>
+          </div>
+          <div class="col-lg-3">
+            <h3 class="heading">Lorem, ipsum dolor. Lorem, ipsum.</h3>
+            <center>
+              <img
+                src="../images/sebastian-herrmann-Sr1xHcs6ic8-unsplash.jpg"
+                alt=""
+                style="width: 100%; height: 150px"
+              />
+            </center>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Suscipit, quos in molestias architecto iusto odit.
+            </p>
+            <div>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASVJREFUWEftmGENwjAQhb8pAAngAAfgAA04wAGgAAtIAAegACQgARyQWzqywLr1jTbZyPqH0dxeX+7dXfOW0bGVdYwPvSa0BTYuozvA/tctNT7HUjKkHqDG94vQDNgDi0RFfwRM9tsnfpVkE+AKjBORKWAfwBSw3/eqIrR22UnMJ4dfAYcmQuViTE3qq1urMjQQUiQLGYCqrLXzqUmygVCvM2RTe+4K5gKc3bO6H62GfECx9r2Xa6wDVByZkElTXLYmV1kyZT+aZOq88cX/LyG1m3zx0TKkFqkaLxe1eoAaLxMauqxo01b2RZgJ0YpaOLO9gezFbd8512F+7A6MYmnkwXkC5gEbfZm9b87Vim+ZiNTJ4Qc510QcwmCVrx9hiD9GdY7QC4M6miUo612rAAAAAElFTkSuQmCC"/> 12,september,20202
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <h3 class="heading">Lorem, ipsum dolor. Lorem, ipsum.</h3>
+            <center>
+              <img
+                src="../images/sebastian-herrmann-Sr1xHcs6ic8-unsplash.jpg"
+                alt=""
+                style="width: 100%; height: 150px"
+              />
+            </center>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Suscipit, quos in molestias architecto iusto odit.
+            </p>
+            <div>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASVJREFUWEftmGENwjAQhb8pAAngAAfgAA04wAGgAAtIAAegACQgARyQWzqywLr1jTbZyPqH0dxeX+7dXfOW0bGVdYwPvSa0BTYuozvA/tctNT7HUjKkHqDG94vQDNgDi0RFfwRM9tsnfpVkE+AKjBORKWAfwBSw3/eqIrR22UnMJ4dfAYcmQuViTE3qq1urMjQQUiQLGYCqrLXzqUmygVCvM2RTe+4K5gKc3bO6H62GfECx9r2Xa6wDVByZkElTXLYmV1kyZT+aZOq88cX/LyG1m3zx0TKkFqkaLxe1eoAaLxMauqxo01b2RZgJ0YpaOLO9gezFbd8512F+7A6MYmnkwXkC5gEbfZm9b87Vim+ZiNTJ4Qc510QcwmCVrx9hiD9GdY7QC4M6miUo612rAAAAAElFTkSuQmCC"/> 12,september,20202
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <h3 class="heading">Lorem, ipsum dolor. Lorem, ipsum.</h3>
+            <center>
+              <img
+                src="../images/sebastian-herrmann-Sr1xHcs6ic8-unsplash.jpg"
+                alt=""
+                style="width: 100%; height: 150px"
+              />
+            </center>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Suscipit, quos in molestias architecto iusto odit.
+            </p>
+            <div>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASVJREFUWEftmGENwjAQhb8pAAngAAfgAA04wAGgAAtIAAegACQgARyQWzqywLr1jTbZyPqH0dxeX+7dXfOW0bGVdYwPvSa0BTYuozvA/tctNT7HUjKkHqDG94vQDNgDi0RFfwRM9tsnfpVkE+AKjBORKWAfwBSw3/eqIrR22UnMJ4dfAYcmQuViTE3qq1urMjQQUiQLGYCqrLXzqUmygVCvM2RTe+4K5gKc3bO6H62GfECx9r2Xa6wDVByZkElTXLYmV1kyZT+aZOq88cX/LyG1m3zx0TKkFqkaLxe1eoAaLxMauqxo01b2RZgJ0YpaOLO9gezFbd8512F+7A6MYmnkwXkC5gEbfZm9b87Vim+ZiNTJ4Qc510QcwmCVrx9hiD9GdY7QC4M6miUo612rAAAAAElFTkSuQmCC"/> 12,september,20202
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <h3 class="heading">Lorem, ipsum dolor. Lorem, ipsum.</h3>
+            <center>
+              <img
+                src="../images/sebastian-herrmann-Sr1xHcs6ic8-unsplash.jpg"
+                alt=""
+                style="width: 100%; height: 150px"
+              />
+            </center>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Suscipit, quos in molestias architecto iusto odit.
+            </p>
+            <div>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASVJREFUWEftmGENwjAQhb8pAAngAAfgAA04wAGgAAtIAAegACQgARyQWzqywLr1jTbZyPqH0dxeX+7dXfOW0bGVdYwPvSa0BTYuozvA/tctNT7HUjKkHqDG94vQDNgDi0RFfwRM9tsnfpVkE+AKjBORKWAfwBSw3/eqIrR22UnMJ4dfAYcmQuViTE3qq1urMjQQUiQLGYCqrLXzqUmygVCvM2RTe+4K5gKc3bO6H62GfECx9r2Xa6wDVByZkElTXLYmV1kyZT+aZOq88cX/LyG1m3zx0TKkFqkaLxe1eoAaLxMauqxo01b2RZgJ0YpaOLO9gezFbd8512F+7A6MYmnkwXkC5gEbfZm9b87Vim+ZiNTJ4Qc510QcwmCVrx9hiD9GdY7QC4M6miUo612rAAAAAElFTkSuQmCC"/> 12,september,20202
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- bootstrap js file -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
