@@ -15,7 +15,10 @@
     />
 
     <style>
-       
+      html {
+        box-sizing: border-box;
+      }
+
       #header {
         background-color: #f0932b;
         color: white;
@@ -39,12 +42,19 @@
         color: black;
         border-radius: 5px;
       }
+      a {
+        text-decoration: none;
+      }
 
+      ul li {
+        list-style: none;
+      }
       #banner {
         background-image: url(../images/bg-image.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         height: 400px;
+        background-position: center;
       }
       #banner .banner-text h1.title {
         background-color: aliceblue;
@@ -92,6 +102,45 @@
         height: 100%;
       }
 
+      .readmore a:after {
+        content: "\ea55" !important;
+        font-family: chevrons-right;
+      }
+
+      .footer-id {
+        background-color: darkgray;
+        padding: 20px 0pxf;
+      }
+
+      .social-icons li {
+        display: inline-block;
+      }
+
+      @media (max-width: 768px) {
+        .testimonial {
+          text-align: center;
+          margin-bottom: 40px;
+          margin-top: 10px;
+        }
+        .footer-widget {
+          text-align: center;
+          margin-bottom: 40px;
+          margin-top: 10px;
+        }
+        #banner {
+          padding: 5px 0px !important;
+        }
+        p.copy-right {
+          text-align: center !important;
+          font-size: 22px !important;
+        }
+        ul.float-md-right {
+          padding: 0 !important;
+          margin: 0 !important;
+          text-align: center !important;
+        }
+      }
+
       /* .banner-text{
              padding: 5rem;
          } */
@@ -136,7 +185,7 @@
       </div>
     </div>
 
-    <div class="container section" style="margin: 40px 25px">
+    <div class="container section" style="margin: 40px 0px">
       <div class="row">
         <div class="col-md-12">
           <h2 class="section-head">
@@ -145,7 +194,7 @@
             </center>
           </h2>
         </div>
-        <div class="col-md-4">
+        <div class="col-sm-6">
           <div class="service-box" style="border: 1px solid red">
             <h2>Lorem ipsum dolor sit.</h2>
             <img
@@ -158,8 +207,8 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="service-box" style="border: 3px solid greenyellow">
+        <div class="col-sm-6">
+          <div class="service-box" style="border: 1px solid red">
             <h2>Lorem ipsum dolor sit.</h2>
             <img
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAtRJREFUWEftmI+RDkEQxd9FgAi4CBABGSCCcxEgAkSACBDBEQEicBfBEQEioH5qWr3tr2dm95TyldJVX13tzkzPm/f6z+wdaM/sYM/w6J8BdFfSLUk3JF1ufyH7VNLX9ve9pLdbFdjCEBs/kPSwgVizF+CeS3rRgE7XrAV0X9KzDUDyxgA7lvRmhmgNIE4IM26fJSEJv9uSjtrg6yYX7/hdSuvw9WgEagbolW2Gn2+SnjQZwi/Pj9vD0zbuY0jswPAJW6WNAGVmoP2wiIURIDa91lhzUMQUQHesB4iYeVnMr043A5RZDrf3qpiqAJFN5xbAyNSjnLkEOwfA2JwYgc14jvgKycNXyXgFyE8MGChHPnfMxlgAyWRW4wQ8Mn2yA+aYKys1yOMUvqBH/ShpYgwwAd4PzF5X3EFmiAp80ibADpK4VaDOWvozj1S/ntY4mBiCpavtYRFLGZBnVuXIAQGYU+dix6GYFyzP/CwyLgOi0NGjMGpFxALPsPXFTl9mSRt3pnmFLBHoEXuRxR8asz+XZkBOJWB4DiO4Iw6QicY6MhptyDfyxbyb4SgD+r4mQluzLAubra9aTs/9Lxx7D8glIxizZFGLFjR3ju2SjXwt5P9bQY3cVHhsGNRb0r53xyHDyKCoYVXaUyruNEDDtPd0RS66u1tVGJGGcoFRGHP25Yace+WwMOLUWweNEtaw32kdDir3ykU3mDXX6Mi5uSID5g3XmazGAUVv/GhyrmquIPaODCg/hccE7x1sdPTe9cN9xU3CK3j3u6x3QasC9I9f0IL66gpLiffaxNwZoBzErNmRqtc6co3LgVx9Z80u+Xyx9CTfqamzrw4WVD0JYPEZRJpH00XSdy39KQE0ZLcuM2sZinn5jrNzssmL3t3pQgzFImin5OfvrBEWgMAwv0U29RatkaxaC2NRlQEa9x4apf+zYfrpnJ1fFNBWyVbP/w9oRtUPb9DHJQ/VpVsAAAAASUVORK5CYII="
@@ -171,7 +220,20 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-sm-6">
+          <div class="service-box" style="border: 1px solid greenyellow">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAtRJREFUWEftmI+RDkEQxd9FgAi4CBABGSCCcxEgAkSACBDBEQEicBfBEQEioH5qWr3tr2dm95TyldJVX13tzkzPm/f6z+wdaM/sYM/w6J8BdFfSLUk3JF1ufyH7VNLX9ve9pLdbFdjCEBs/kPSwgVizF+CeS3rRgE7XrAV0X9KzDUDyxgA7lvRmhmgNIE4IM26fJSEJv9uSjtrg6yYX7/hdSuvw9WgEagbolW2Gn2+SnjQZwi/Pj9vD0zbuY0jswPAJW6WNAGVmoP2wiIURIDa91lhzUMQUQHesB4iYeVnMr043A5RZDrf3qpiqAJFN5xbAyNSjnLkEOwfA2JwYgc14jvgKycNXyXgFyE8MGChHPnfMxlgAyWRW4wQ8Mn2yA+aYKys1yOMUvqBH/ShpYgwwAd4PzF5X3EFmiAp80ibADpK4VaDOWvozj1S/ntY4mBiCpavtYRFLGZBnVuXIAQGYU+dix6GYFyzP/CwyLgOi0NGjMGpFxALPsPXFTl9mSRt3pnmFLBHoEXuRxR8asz+XZkBOJWB4DiO4Iw6QicY6MhptyDfyxbyb4SgD+r4mQluzLAubra9aTs/9Lxx7D8glIxizZFGLFjR3ju2SjXwt5P9bQY3cVHhsGNRb0r53xyHDyKCoYVXaUyruNEDDtPd0RS66u1tVGJGGcoFRGHP25Yace+WwMOLUWweNEtaw32kdDir3ykU3mDXX6Mi5uSID5g3XmazGAUVv/GhyrmquIPaODCg/hccE7x1sdPTe9cN9xU3CK3j3u6x3QasC9I9f0IL66gpLiffaxNwZoBzErNmRqtc6co3LgVx9Z80u+Xyx9CTfqamzrw4WVD0JYPEZRJpH00XSdy39KQE0ZLcuM2sZinn5jrNzssmL3t3pQgzFImin5OfvrBEWgMAwv0U29RatkaxaC2NRlQEa9x4apf+zYfrpnJ1fFNBWyVbP/w9oRtUPb9DHJQ/VpVsAAAAASUVORK5CYII="
+            />
+            <h3>some heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima,
+              alias.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6">
           <div class="service-box" style="border: 1px solid black">
             <h2>Lorem ipsum dolor sit.</h2>
             <img
@@ -235,13 +297,13 @@
       </div>
     </div>
 
-    <div id="news" style="margin: 40px 0;">
+    <div id="news" style="margin: 40px 0">
       <div class="container">
         <div class="row">
-          <div class="col-md-12" style="margin-bottom: 20px;">
-           <center> <h2 class="section-head" >Recent News</h2></center>
+          <div class="col-md-12" style="margin-bottom: 20px">
+            <center><h2 class="section-head">Recent News</h2></center>
           </div>
-          <div class="col-lg-3">
+          <div class="col-md-6 col-lg-3" style="padding: 20px 18px">
             <h3 class="heading">Lorem, ipsum dolor. Lorem, ipsum.</h3>
             <center>
               <img
@@ -255,10 +317,19 @@
               Suscipit, quos in molestias architecto iusto odit.
             </p>
             <div>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASVJREFUWEftmGENwjAQhb8pAAngAAfgAA04wAGgAAtIAAegACQgARyQWzqywLr1jTbZyPqH0dxeX+7dXfOW0bGVdYwPvSa0BTYuozvA/tctNT7HUjKkHqDG94vQDNgDi0RFfwRM9tsnfpVkE+AKjBORKWAfwBSw3/eqIrR22UnMJ4dfAYcmQuViTE3qq1urMjQQUiQLGYCqrLXzqUmygVCvM2RTe+4K5gKc3bO6H62GfECx9r2Xa6wDVByZkElTXLYmV1kyZT+aZOq88cX/LyG1m3zx0TKkFqkaLxe1eoAaLxMauqxo01b2RZgJ0YpaOLO9gezFbd8512F+7A6MYmnkwXkC5gEbfZm9b87Vim+ZiNTJ4Qc510QcwmCVrx9hiD9GdY7QC4M6miUo612rAAAAAElFTkSuQmCC"/> 12,september,20202
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASVJREFUWEftmGENwjAQhb8pAAngAAfgAA04wAGgAAtIAAegACQgARyQWzqywLr1jTbZyPqH0dxeX+7dXfOW0bGVdYwPvSa0BTYuozvA/tctNT7HUjKkHqDG94vQDNgDi0RFfwRM9tsnfpVkE+AKjBORKWAfwBSw3/eqIrR22UnMJ4dfAYcmQuViTE3qq1urMjQQUiQLGYCqrLXzqUmygVCvM2RTe+4K5gKc3bO6H62GfECx9r2Xa6wDVByZkElTXLYmV1kyZT+aZOq88cX/LyG1m3zx0TKkFqkaLxe1eoAaLxMauqxo01b2RZgJ0YpaOLO9gezFbd8512F+7A6MYmnkwXkC5gEbfZm9b87Vim+ZiNTJ4Qc510QcwmCVrx9hiD9GdY7QC4M6miUo612rAAAAAElFTkSuQmCC"
+              />
+              12,september,20202
+            </div>
+            <div class="readmore">
+              <a href="">Read More</a
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAQ9JREFUWEft1tENAiEQBNC5CrQEO9AO1A7sQK3AVixBK7AELcFStAMzCSTEBHe4A4IJ9+MHBB5z7HoDGnuGxjzoIOuN9IR6QlYC1vjf3qGVO9kzcsIDgIt1emVcSYiYu1tsC+AbRcjegY7Kpr/mKCAClm6RF4AQtQNwCzYgbhJKATGhB4BZBOUT8q5JKAXEjaqhVFA1VAqoCioVVBw1BlQUNQXE3jR3pfUGsAl61HflXQGweZrPGJBvlNkx1KaCimJSQcUxKaAqGBVUDaOC+D+2jlQTK8t/CXCKXE2xclMu9SIo57C0/ZpnAKccGDUh3wj528QHmtnMck5QXlnO/cy1OsiKqCfUE7ISsMabu0MfOktSJbqVG5wAAAAASUVORK5CYII="
+              />
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-md-6 col-lg-3" style="padding: 20px 18px">
             <h3 class="heading">Lorem, ipsum dolor. Lorem, ipsum.</h3>
             <center>
               <img
@@ -272,10 +343,19 @@
               Suscipit, quos in molestias architecto iusto odit.
             </p>
             <div>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASVJREFUWEftmGENwjAQhb8pAAngAAfgAA04wAGgAAtIAAegACQgARyQWzqywLr1jTbZyPqH0dxeX+7dXfOW0bGVdYwPvSa0BTYuozvA/tctNT7HUjKkHqDG94vQDNgDi0RFfwRM9tsnfpVkE+AKjBORKWAfwBSw3/eqIrR22UnMJ4dfAYcmQuViTE3qq1urMjQQUiQLGYCqrLXzqUmygVCvM2RTe+4K5gKc3bO6H62GfECx9r2Xa6wDVByZkElTXLYmV1kyZT+aZOq88cX/LyG1m3zx0TKkFqkaLxe1eoAaLxMauqxo01b2RZgJ0YpaOLO9gezFbd8512F+7A6MYmnkwXkC5gEbfZm9b87Vim+ZiNTJ4Qc510QcwmCVrx9hiD9GdY7QC4M6miUo612rAAAAAElFTkSuQmCC"/> 12,september,20202
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASVJREFUWEftmGENwjAQhb8pAAngAAfgAA04wAGgAAtIAAegACQgARyQWzqywLr1jTbZyPqH0dxeX+7dXfOW0bGVdYwPvSa0BTYuozvA/tctNT7HUjKkHqDG94vQDNgDi0RFfwRM9tsnfpVkE+AKjBORKWAfwBSw3/eqIrR22UnMJ4dfAYcmQuViTE3qq1urMjQQUiQLGYCqrLXzqUmygVCvM2RTe+4K5gKc3bO6H62GfECx9r2Xa6wDVByZkElTXLYmV1kyZT+aZOq88cX/LyG1m3zx0TKkFqkaLxe1eoAaLxMauqxo01b2RZgJ0YpaOLO9gezFbd8512F+7A6MYmnkwXkC5gEbfZm9b87Vim+ZiNTJ4Qc510QcwmCVrx9hiD9GdY7QC4M6miUo612rAAAAAElFTkSuQmCC"
+              />
+              12,september,20202
+            </div>
+            <div class="readmore">
+              <a href="">Read More</a
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAQ9JREFUWEft1tENAiEQBNC5CrQEO9AO1A7sQK3AVixBK7AELcFStAMzCSTEBHe4A4IJ9+MHBB5z7HoDGnuGxjzoIOuN9IR6QlYC1vjf3qGVO9kzcsIDgIt1emVcSYiYu1tsC+AbRcjegY7Kpr/mKCAClm6RF4AQtQNwCzYgbhJKATGhB4BZBOUT8q5JKAXEjaqhVFA1VAqoCioVVBw1BlQUNQXE3jR3pfUGsAl61HflXQGweZrPGJBvlNkx1KaCimJSQcUxKaAqGBVUDaOC+D+2jlQTK8t/CXCKXE2xclMu9SIo57C0/ZpnAKccGDUh3wj528QHmtnMck5QXlnO/cy1OsiKqCfUE7ISsMabu0MfOktSJbqVG5wAAAAASUVORK5CYII="
+              />
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-md-6 col-lg-3" style="padding: 20px 18px">
             <h3 class="heading">Lorem, ipsum dolor. Lorem, ipsum.</h3>
             <center>
               <img
@@ -289,10 +369,19 @@
               Suscipit, quos in molestias architecto iusto odit.
             </p>
             <div>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASVJREFUWEftmGENwjAQhb8pAAngAAfgAA04wAGgAAtIAAegACQgARyQWzqywLr1jTbZyPqH0dxeX+7dXfOW0bGVdYwPvSa0BTYuozvA/tctNT7HUjKkHqDG94vQDNgDi0RFfwRM9tsnfpVkE+AKjBORKWAfwBSw3/eqIrR22UnMJ4dfAYcmQuViTE3qq1urMjQQUiQLGYCqrLXzqUmygVCvM2RTe+4K5gKc3bO6H62GfECx9r2Xa6wDVByZkElTXLYmV1kyZT+aZOq88cX/LyG1m3zx0TKkFqkaLxe1eoAaLxMauqxo01b2RZgJ0YpaOLO9gezFbd8512F+7A6MYmnkwXkC5gEbfZm9b87Vim+ZiNTJ4Qc510QcwmCVrx9hiD9GdY7QC4M6miUo612rAAAAAElFTkSuQmCC"/> 12,september,20202
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASVJREFUWEftmGENwjAQhb8pAAngAAfgAA04wAGgAAtIAAegACQgARyQWzqywLr1jTbZyPqH0dxeX+7dXfOW0bGVdYwPvSa0BTYuozvA/tctNT7HUjKkHqDG94vQDNgDi0RFfwRM9tsnfpVkE+AKjBORKWAfwBSw3/eqIrR22UnMJ4dfAYcmQuViTE3qq1urMjQQUiQLGYCqrLXzqUmygVCvM2RTe+4K5gKc3bO6H62GfECx9r2Xa6wDVByZkElTXLYmV1kyZT+aZOq88cX/LyG1m3zx0TKkFqkaLxe1eoAaLxMauqxo01b2RZgJ0YpaOLO9gezFbd8512F+7A6MYmnkwXkC5gEbfZm9b87Vim+ZiNTJ4Qc510QcwmCVrx9hiD9GdY7QC4M6miUo612rAAAAAElFTkSuQmCC"
+              />
+              12,september,20202
+            </div>
+            <div class="readmore">
+              <a href="">Read More</a
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAQ9JREFUWEft1tENAiEQBNC5CrQEO9AO1A7sQK3AVixBK7AELcFStAMzCSTEBHe4A4IJ9+MHBB5z7HoDGnuGxjzoIOuN9IR6QlYC1vjf3qGVO9kzcsIDgIt1emVcSYiYu1tsC+AbRcjegY7Kpr/mKCAClm6RF4AQtQNwCzYgbhJKATGhB4BZBOUT8q5JKAXEjaqhVFA1VAqoCioVVBw1BlQUNQXE3jR3pfUGsAl61HflXQGweZrPGJBvlNkx1KaCimJSQcUxKaAqGBVUDaOC+D+2jlQTK8t/CXCKXE2xclMu9SIo57C0/ZpnAKccGDUh3wj528QHmtnMck5QXlnO/cy1OsiKqCfUE7ISsMabu0MfOktSJbqVG5wAAAAASUVORK5CYII="
+              />
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-md-6 col-lg-3" style="padding: 20px 18px">
             <h3 class="heading">Lorem, ipsum dolor. Lorem, ipsum.</h3>
             <center>
               <img
@@ -306,8 +395,112 @@
               Suscipit, quos in molestias architecto iusto odit.
             </p>
             <div>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASVJREFUWEftmGENwjAQhb8pAAngAAfgAA04wAGgAAtIAAegACQgARyQWzqywLr1jTbZyPqH0dxeX+7dXfOW0bGVdYwPvSa0BTYuozvA/tctNT7HUjKkHqDG94vQDNgDi0RFfwRM9tsnfpVkE+AKjBORKWAfwBSw3/eqIrR22UnMJ4dfAYcmQuViTE3qq1urMjQQUiQLGYCqrLXzqUmygVCvM2RTe+4K5gKc3bO6H62GfECx9r2Xa6wDVByZkElTXLYmV1kyZT+aZOq88cX/LyG1m3zx0TKkFqkaLxe1eoAaLxMauqxo01b2RZgJ0YpaOLO9gezFbd8512F+7A6MYmnkwXkC5gEbfZm9b87Vim+ZiNTJ4Qc510QcwmCVrx9hiD9GdY7QC4M6miUo612rAAAAAElFTkSuQmCC"/> 12,september,20202
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASVJREFUWEftmGENwjAQhb8pAAngAAfgAA04wAGgAAtIAAegACQgARyQWzqywLr1jTbZyPqH0dxeX+7dXfOW0bGVdYwPvSa0BTYuozvA/tctNT7HUjKkHqDG94vQDNgDi0RFfwRM9tsnfpVkE+AKjBORKWAfwBSw3/eqIrR22UnMJ4dfAYcmQuViTE3qq1urMjQQUiQLGYCqrLXzqUmygVCvM2RTe+4K5gKc3bO6H62GfECx9r2Xa6wDVByZkElTXLYmV1kyZT+aZOq88cX/LyG1m3zx0TKkFqkaLxe1eoAaLxMauqxo01b2RZgJ0YpaOLO9gezFbd8512F+7A6MYmnkwXkC5gEbfZm9b87Vim+ZiNTJ4Qc510QcwmCVrx9hiD9GdY7QC4M6miUo612rAAAAAElFTkSuQmCC"
+              />
+              12,september,20202
             </div>
+            <div class="readmore">
+              <a href="">Read More</a
+              ><img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAQ9JREFUWEft1tENAiEQBNC5CrQEO9AO1A7sQK3AVixBK7AELcFStAMzCSTEBHe4A4IJ9+MHBB5z7HoDGnuGxjzoIOuN9IR6QlYC1vjf3qGVO9kzcsIDgIt1emVcSYiYu1tsC+AbRcjegY7Kpr/mKCAClm6RF4AQtQNwCzYgbhJKATGhB4BZBOUT8q5JKAXEjaqhVFA1VAqoCioVVBw1BlQUNQXE3jR3pfUGsAl61HflXQGweZrPGJBvlNkx1KaCimJSQcUxKaAqGBVUDaOC+D+2jlQTK8t/CXCKXE2xclMu9SIo57C0/ZpnAKccGDUh3wj528QHmtnMck5QXlnO/cy1OsiKqCfUE7ISsMabu0MfOktSJbqVG5wAAAAASUVORK5CYII="
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-id">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="footer-widget">
+              <h2 class="section-head">Footer section</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Doloribus sit ducimus rerum. Nam, quaerat!
+              </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Doloribus sit ducimus rerum. Nam, quaerat!
+              </p>
+              <h5>Lorem ipsum dolor sit amet.</h5>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="footer-widget">
+              <h2 class="section-head">Footer section</h2>
+              <ul>
+                <li>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Doloribus sit ducimus rerum. Nam, quaerat!
+                </li>
+                <li>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Doloribus sit ducimus rerum. Nam, quaerat!
+                </li>
+                <li>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Doloribus sit ducimus rerum. Nam, quaerat!
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="footer-widget">
+              <h2 class="section-head">Footer section</h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Doloribus sit ducimus rerum. Nam, quaerat!
+              </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Doloribus sit ducimus rerum. Nam, quaerat!
+              </p>
+              <h5>Lorem ipsum dolor sit amet.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="footer-main"
+      style="padding: 40px 0px; background-color: lightblue"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="copy-right">@copy all rights reserved</p>
+          </div>
+          <div class="col-md-6 social-icons">
+            <ul style="padding: 0; margin: 0" class="float-md-right">
+              <li>
+                <a href="" class=""
+                  ><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAk9JREFUWEftl7uuTkEUgL/zBKhFEFFQ4EjUeAOXKETDE6A4iYi4REREgScgoSJuT4BaTpwGFaEQLU9AvmSN/H579szYe5+c4qzkzy7+mVnfrNustcAak4U1xsM6UMkjLRbaB2wF/LbICvAV8FuUGqBzwBVgY/G0/gU/gKvAvb5lfUACPAcODQSZ3/4aOAoI+I/0Abnx4Mgw6TjPPtwCpJvuTASTjj0DPJjXkbPQlwjgMZhUrHu85KzF1bG9BsgsejcGCfASOBJn+TUmZ2VxPvu6LGQQv6oA+hkmfwEYE9uiJLj/NLAhlKlU6QoD48i9f6QLyNQ0zfvEm6u0M1MCTtC9gK7x15Wt16IUDAKadcMO4ACwG/gFfADeAp9Dg8VQqJwMBtJNukbL7InbWVNm5WlY+H24sC8eBwNZZY0Fs+M2cDxz9SfAUjwZd4GzmXWDgVIQngAeF+JM2GcRa/enAtoU7roMeLs+uQTcKLhtsIUSkMquF4AuAjenBkouOwYYvH1iIUzlYTKXpaDeAtwCTmaIHgEXgG/ApEFtupthfndGep+ag3oY8fVpNdJe3Ra79BxsBvYDu6IwfgSWge+rVRiTMYSyIPokdIkPtHFTanersqz2cdVt9jM+jvbMis+EEBbPGql6XMdsP0pQVe2Hh4zZoOWgtKrv4l+S6xi7mqnSbVv/Px8loQrIRVM2+W9y00xpDLLJGnvyEEYPNI9ByZRutto6tQ4RY8Zz/GWlZnJNm80+h8fWwdGaZZKMNkoPsUrz3hYLNR/+PxvWgUpW+w0REoYlHAlgDgAAAABJRU5ErkJggg=="
+                /></a>
+              </li>
+              <li>
+                <a href="" class=""
+                  ><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAk9JREFUWEftl7uuTkEUgL/zBKhFEFFQ4EjUeAOXKETDE6A4iYi4REREgScgoSJuT4BaTpwGFaEQLU9AvmSN/H579szYe5+c4qzkzy7+mVnfrNustcAak4U1xsM6UMkjLRbaB2wF/LbICvAV8FuUGqBzwBVgY/G0/gU/gKvAvb5lfUACPAcODQSZ3/4aOAoI+I/0Abnx4Mgw6TjPPtwCpJvuTASTjj0DPJjXkbPQlwjgMZhUrHu85KzF1bG9BsgsejcGCfASOBJn+TUmZ2VxPvu6LGQQv6oA+hkmfwEYE9uiJLj/NLAhlKlU6QoD48i9f6QLyNQ0zfvEm6u0M1MCTtC9gK7x15Wt16IUDAKadcMO4ACwG/gFfADeAp9Dg8VQqJwMBtJNukbL7InbWVNm5WlY+H24sC8eBwNZZY0Fs+M2cDxz9SfAUjwZd4GzmXWDgVIQngAeF+JM2GcRa/enAtoU7roMeLs+uQTcKLhtsIUSkMquF4AuAjenBkouOwYYvH1iIUzlYTKXpaDeAtwCTmaIHgEXgG/ApEFtupthfndGep+ag3oY8fVpNdJe3Ra79BxsBvYDu6IwfgSWge+rVRiTMYSyIPokdIkPtHFTanersqz2cdVt9jM+jvbMis+EEBbPGql6XMdsP0pQVe2Hh4zZoOWgtKrv4l+S6xi7mqnSbVv/Px8loQrIRVM2+W9y00xpDLLJGnvyEEYPNI9ByZRutto6tQ4RY8Zz/GWlZnJNm80+h8fWwdGaZZKMNkoPsUrz3hYLNR/+PxvWgUpW+w0REoYlHAlgDgAAAABJRU5ErkJggg=="
+                /></a>
+              </li>
+              <li>
+                <a href="" class=""
+                  ><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAk9JREFUWEftl7uuTkEUgL/zBKhFEFFQ4EjUeAOXKETDE6A4iYi4REREgScgoSJuT4BaTpwGFaEQLU9AvmSN/H579szYe5+c4qzkzy7+mVnfrNustcAak4U1xsM6UMkjLRbaB2wF/LbICvAV8FuUGqBzwBVgY/G0/gU/gKvAvb5lfUACPAcODQSZ3/4aOAoI+I/0Abnx4Mgw6TjPPtwCpJvuTASTjj0DPJjXkbPQlwjgMZhUrHu85KzF1bG9BsgsejcGCfASOBJn+TUmZ2VxPvu6LGQQv6oA+hkmfwEYE9uiJLj/NLAhlKlU6QoD48i9f6QLyNQ0zfvEm6u0M1MCTtC9gK7x15Wt16IUDAKadcMO4ACwG/gFfADeAp9Dg8VQqJwMBtJNukbL7InbWVNm5WlY+H24sC8eBwNZZY0Fs+M2cDxz9SfAUjwZd4GzmXWDgVIQngAeF+JM2GcRa/enAtoU7roMeLs+uQTcKLhtsIUSkMquF4AuAjenBkouOwYYvH1iIUzlYTKXpaDeAtwCTmaIHgEXgG/ApEFtupthfndGep+ag3oY8fVpNdJe3Ra79BxsBvYDu6IwfgSWge+rVRiTMYSyIPokdIkPtHFTanersqz2cdVt9jM+jvbMis+EEBbPGql6XMdsP0pQVe2Hh4zZoOWgtKrv4l+S6xi7mqnSbVv/Px8loQrIRVM2+W9y00xpDLLJGnvyEEYPNI9ByZRutto6tQ4RY8Zz/GWlZnJNm80+h8fWwdGaZZKMNkoPsUrz3hYLNR/+PxvWgUpW+w0REoYlHAlgDgAAAABJRU5ErkJggg=="
+                /></a>
+              </li>
+              <li>
+                <a href="" class=""
+                  ><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAk9JREFUWEftl7uuTkEUgL/zBKhFEFFQ4EjUeAOXKETDE6A4iYi4REREgScgoSJuT4BaTpwGFaEQLU9AvmSN/H579szYe5+c4qzkzy7+mVnfrNustcAak4U1xsM6UMkjLRbaB2wF/LbICvAV8FuUGqBzwBVgY/G0/gU/gKvAvb5lfUACPAcODQSZ3/4aOAoI+I/0Abnx4Mgw6TjPPtwCpJvuTASTjj0DPJjXkbPQlwjgMZhUrHu85KzF1bG9BsgsejcGCfASOBJn+TUmZ2VxPvu6LGQQv6oA+hkmfwEYE9uiJLj/NLAhlKlU6QoD48i9f6QLyNQ0zfvEm6u0M1MCTtC9gK7x15Wt16IUDAKadcMO4ACwG/gFfADeAp9Dg8VQqJwMBtJNukbL7InbWVNm5WlY+H24sC8eBwNZZY0Fs+M2cDxz9SfAUjwZd4GzmXWDgVIQngAeF+JM2GcRa/enAtoU7roMeLs+uQTcKLhtsIUSkMquF4AuAjenBkouOwYYvH1iIUzlYTKXpaDeAtwCTmaIHgEXgG/ApEFtupthfndGep+ag3oY8fVpNdJe3Ra79BxsBvYDu6IwfgSWge+rVRiTMYSyIPokdIkPtHFTanersqz2cdVt9jM+jvbMis+EEBbPGql6XMdsP0pQVe2Hh4zZoOWgtKrv4l+S6xi7mqnSbVv/Px8loQrIRVM2+W9y00xpDLLJGnvyEEYPNI9ByZRutto6tQ4RY8Zz/GWlZnJNm80+h8fWwdGaZZKMNkoPsUrz3hYLNR/+PxvWgUpW+w0REoYlHAlgDgAAAABJRU5ErkJggg=="
+                /></a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
